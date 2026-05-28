@@ -16,8 +16,6 @@ bmi = round(user_weight / (user_height ** 2), 1)
 water_needed = round(user_weight * 0.03, 2)
 
 # 4. Вывод красивого результата
-print(
-    f"Привет, {user_name}! Твой возраст: {user_age} лет, ИМТ: {bmi}, "
-    f"Норма воды: {water_needed} л."
-)
+print(f"Привет, {user_name}! Твой возраст: {user_age} лет,", end="")
+print(f" ИМТ: {bmi}, Норма воды: {water_needed} л.")
 print("Расчет окончен. Будьте здоровы!")
