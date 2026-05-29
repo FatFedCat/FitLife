@@ -1,7 +1,9 @@
 # Проект FitLife - MVP версия 1.0
 
-#блок проверки ввода данных
+
+# блок проверки ввода данных
 def checking_age_for_integer(user_input):
+    """Проверка возраста на целое число"""
     while True:
         try:
             return int(user_input)
@@ -9,7 +11,9 @@ def checking_age_for_integer(user_input):
             print("Пожалуйста, введите целое число.")
             user_input = input("Введите ваш возраст(целое число): ")
 
+
 def checking_weight_for_float(user_input):
+    """Проверка веса на float"""
     while True:
         try:
             return float(user_input)
@@ -17,7 +21,9 @@ def checking_weight_for_float(user_input):
             print("Пожалуйста, введите число.")
             user_input = input("Введите ваш вес(в кг): ")
 
+
 def checking_height_for_float(user_input):
+    """Проверка роста на float"""
     while True:
         try:
             return float(user_input)
@@ -25,18 +31,25 @@ def checking_height_for_float(user_input):
             print("Пожалуйста, введите число.")
             user_input = input("Введите ваш рост(в метрах): ")
 
-#блок констант
+
+# блок констант
 # Норма воды 30мл на кг веса
 WATER_NORMAL = 0.03
 
-#блок ввода данных
+# блок ввода данных
 # 1. Знакомство
 user_name = str(input("Введите ваше имя: "))
-user_age = checking_age_for_integer(input("Введите ваш возраст(целое число): "))
+user_age = checking_age_for_integer(
+    input("Введите ваш возраст(целое число): ")
+)
 
 # 2. Сбор данных
-user_weight = checking_weight_for_float(input("Введите ваш вес(в кг): "))
-user_height = checking_height_for_float(input("Введите ваш рост(в метрах): "))
+user_weight = checking_weight_for_float(
+    input("Введите ваш вес(в кг): ")
+)
+user_height = checking_height_for_float(
+    input("Введите ваш рост(в метрах): ")
+)
 
 # 3. Логика расчетов
 bmi = round(user_weight / (user_height ** 2), 1)
